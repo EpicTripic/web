@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+<link href='/favicon.ico' rel='icon' type='image/x-icon'>
+<title>EpicTripic</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="z6sFkYbgoxp3csEkwgUtTLtSrMjKjz61v8F79Oql6JJjwTPfK-l9C9S94ip9Y7lll195jyEEobp2760P9Ym8bg" />
+
+<link rel="stylesheet" href="/assets/application-2cdf6bae10d7677131c5559c4acab5f4afe41fad9ff12862d81828c8ed75c781.css" data-turbo-track="reload" />
+<script src="/assets/application-d831fdfdbe4be5d71b12b4438f3bd4cc1d72ac2ffb67a907e899de9b6699e80d.js" data-turbo-track="reload" defer="defer"></script>
+<script>
+  setTimeout(function() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', "GTM-NK4J85WR");
+  }, 1000)
+</script>
+
+<script>
+  if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+</script>
+
+
+</head>
+<body class='dark:bg-gray-800 antialiased'>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-NK4J85WR' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+
+<nav class='bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 z-30'>
+<div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+<a class='flex items-center' href='/'>
+<span class='border-2 px-2 py-1 border-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white dark:border-white'>epictripic</span>
+</a>
+<div class='flex md:order-2'>
+<button class='text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5' data-tooltip-target='tooltip-theme' id='theme-toggle' title='Toggle theme' type='button'>
+<svg class='hidden w-5 h-5' fill='currentColor' id='theme-toggle-dark-icon' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+<path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'></path>
+</svg>
+<svg class='hidden w-5 h-5' fill='currentColor' id='theme-toggle-light-icon' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+<path clip-rule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z' fill-rule='evenodd'></path>
+</svg>
+</button>
+<div class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700' id='tooltip-theme' role='tooltip'>
+Switch Theme
+<div class='tooltip-arrow' data-popper-arrow=''></div>
+</div>
+<button aria-controls='navbar-sticky' aria-expanded='false' class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600' data-collapse-toggle='navbar-sticky' type='button'>
+<span class='sr-only'>Open main menu</span>
+<svg aria-hidden='true' class='w-5 h-5' fill='none' viewbox='0 0 17 14' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 1h15M1 7h15M1 13h15' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</button>
+</div>
+<div class='items-center justify-between hidden w-full md:flex md:w-auto md:order-1' id='navbar-sticky'>
+<ul class='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
+<li>
+<a aria-current='page' class='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500' href='/'>Home</a>
+</li>
+<li>
+<a class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700' href='https://www.expedia.com/' rel='nofollow' target='_blank'>Hotels</a>
+</li>
+<li>
+<a class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700' href='https://vrbo.com' rel='nofollow' target='_blank'>Private Accommodations</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class='mt-[4.5rem]'>
+
+</div>
+<main class='container mx-auto px-4 my-5'>
+<h1 class='pt-5 text-4xl font-extrabold dark:text-white'>Explore latest articles</h1>
+<div>
+<div class='pt-10 grid lg:grid-cols-4 gap-4 md:grid-cols-2 sm:grid-cols-1 place-items-center'>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-10-lavish-hotels-in-pokhara-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/46000000/45700000/45692400/45692308/21677803.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-10-lavish-hotels-in-pokhara-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top 10 lavish hotels in Pokhara, Nepal 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Experience the finest luxury in Pokhara, Nepal! Check out the top 10 lavish hotels for an unforgettable stay. Enjoy breathtaking views and warm Nepalese hospitality. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-10-lavish-hotels-in-pokhara-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-best-times-square-luxury-hotels-in-new-york'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/10000/3300/3281/5903ee36.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-best-times-square-luxury-hotels-in-new-york'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The Best Times Square Luxury Hotels in New York
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore luxurious Times Square hotels for a superlative NYC experience. Elevate your stay with handpicked selections offering style and sophistication.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-best-times-square-luxury-hotels-in-new-york'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-accommodations-for-workcation-getaways-in-the-united-kingdom'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/25000000/24260000/24255900/24255837/8d1d273a.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-accommodations-for-workcation-getaways-in-the-united-kingdom'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Accommodations for Workcation Getaways in the United Kingdom
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Escape routine with Workcation Getaways in the UK, merging workspaces with British culture, landmarks, and adventures for a refreshing experience.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-accommodations-for-workcation-getaways-in-the-united-kingdom'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/cheap-family-friendly-apartments-in-new-york-city'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/12000000/11280000/11270100/11270068/b8f9c345.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/cheap-family-friendly-apartments-in-new-york-city'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Family-Friendly Apartments in New York City
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Live a once-in-a-lifetime experience here in New York City’s family-friendly and best apartments. Happy traveling folks!
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/cheap-family-friendly-apartments-in-new-york-city'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-eco-friendly-stays-in-the-united-kingdom'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/2000000/1460000/1457700/1457686/4bf00e2e.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-eco-friendly-stays-in-the-united-kingdom'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top Eco-friendly Stays in the United Kingdom
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore the UK with eco-friendly stays, blending comfort and environmental consciousness. From countryside tranquility to city chic, enjoy sustainable adventures.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-eco-friendly-stays-in-the-united-kingdom'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-hotels-with-spa-in-norway'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/530000/525600/525588/65c764ae.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-hotels-with-spa-in-norway'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Hotels with Spa in Norway
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Indulge in an unforgettable spa escape in Norway with top hotels offering luxury, relaxation, and wellness amid stunning landscapes.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-hotels-with-spa-in-norway'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-10-wedding-venues-in-arizona-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/800000/791200/791197/1d6fec81.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-10-wedding-venues-in-arizona-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top 10 Wedding Venues in Arizona, USA
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Experience the magic of Arizona&#39;s finest wedding venues and make your special day truly unforgettable with our curated list of the top 10 wedding venues.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-10-wedding-venues-in-arizona-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/14-best-cheap-hotels-in-north-carolina'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/50000/40500/40419/a541180a.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/14-best-cheap-hotels-in-north-carolina'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+14 Best Cheap Hotels in North Carolina
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover budget-friendly comfort in North Carolina. From the Blue Ridge Mountains to the Outer Banks, explore 14 charming and affordable hotels.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/14-best-cheap-hotels-in-north-carolina'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/12-best-hotels-with-pool-in-las-vegas'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/150000/140600/140596/4dc73ae9.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/12-best-hotels-with-pool-in-las-vegas'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+12 Unique Hotels with Pool in Las Vegas
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Embark on a thrilling Vegas escapade with the premier guide to top Poolside Hotspots! Plunge into remarkable experiences, from elevated rooftops to relaxed settings.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/12-best-hotels-with-pool-in-las-vegas'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-15-best-yurts-in-north-carolina'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/93000000/92150000/92145800/92145758/9ad9fefd.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-15-best-yurts-in-north-carolina'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top 13 Best Yurts in North Carolina 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover North Carolina&#39;s best yurts for a cozy and thrilling escape. Ideal for nature lovers, families, or a romantic retreat.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-15-best-yurts-in-north-carolina'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/10-best-2-bedroom-hotels-in-san-diego-california'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/77000000/76520000/76510800/76510728/28d9b0f4.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/10-best-2-bedroom-hotels-in-san-diego-california'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+10 Best 2-Bedroom Hotels in San diego, California 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+San Diego&#39;s top 2-bedroom hotels blend comfort, excitement, spacious rooms, modern amenities, and stunning views for unforgettable experiences.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/10-best-2-bedroom-hotels-in-san-diego-california'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-wedding-venues-in-florida-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/810000/807800/807800/c777e8c2.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-wedding-venues-in-florida-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Hotel wedding venues in Florida, USA
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Plan your perfect wedding in Florida, USA with the best hotel venues, ensuring an unforgettable experience for you and your guests in a luxurious ambiance. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-wedding-venues-in-florida-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/family-friendly-budget-hotels-in-pokhara-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/90000000/89800000/89794900/89794841/856997ca.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/family-friendly-budget-hotels-in-pokhara-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Family-friendly Budget Hotels in Pokhara, Nepal
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover affordable and family-friendly hotels in Pokhara, Nepal for your next budget-friendly getaway. Explore the beauty of Pokhara while staying on a budget. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/family-friendly-budget-hotels-in-pokhara-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/secluded-cabins-for-a-private-stay-in-scotland-uk'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/94000000/93330000/93320700/93320656/f77dfdd0.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/secluded-cabins-for-a-private-stay-in-scotland-uk'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Secluded cabins for a private stay in Scotland, UK
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Experience tranquility in Scotland, UK with secluded cabins perfect for a private and relaxing vacation. Your peaceful escape in the beauty of Scotland. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/secluded-cabins-for-a-private-stay-in-scotland-uk'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-15-accommodations-in-virginia-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/860000/856600/856597/0dce9df4.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-15-accommodations-in-virginia-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top 15 Accommodations in Virginia, USA
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the top 15 accommodations in Virginia, USA! From cozy bed and breakfasts to luxurious resorts, find your perfect stay in this charming state.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-15-accommodations-in-virginia-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/hotels-with-rooftop-pools-in-florida-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/20000/16600/16596/3512c628.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/hotels-with-rooftop-pools-in-florida-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Hotels with Outdoor Pools in Florida, USA
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Experience ultimate luxury and relaxation in Florida hotels, featuring outdoor pools that offer a perfect blend of refreshment with panoramic views.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/hotels-with-rooftop-pools-in-florida-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/hotels-with-infinity-pools-in-miami-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/14000000/13130000/13125600/13125517/8f64204b.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/hotels-with-infinity-pools-in-miami-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Hotels with Infinity Pools in Miami, USA
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Escape to Miami, USA, and dive into luxury with hotels featuring breathtaking infinity pools. Experience serenity and stunning views amidst the vibrant cityscape. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/hotels-with-infinity-pools-in-miami-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-accommodations-to-stay-for-your-trip-to-loch-ness-scotland'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/3000000/2540000/2539700/2539636/6a70f1ee.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-accommodations-to-stay-for-your-trip-to-loch-ness-scotland'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Accommodations to Stay for Your Trip to Loch Ness, Scotland
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the best accommodations for your Loch Ness adventure in Scotland. Find cozy lodges, charming hotels, and lakeside retreats for an unforgettable stay.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-accommodations-to-stay-for-your-trip-to-loch-ness-scotland'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-budget-accommodations-in-sao-paulo-brazil'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/20000/18500/18424/d803174f.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-budget-accommodations-in-sao-paulo-brazil'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Budget Accommodations in Sao Paulo, Brazil
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the top budget accommodations in Sao Paulo, Brazil, offering comfort and affordability without compromising quality. Find your perfect stay!
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-budget-accommodations-in-sao-paulo-brazil'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-rooftop-pool-hotels-with-panoramic-views-in-miami-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/14000000/13130000/13125600/13125517/6c752ea1.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-rooftop-pool-hotels-with-panoramic-views-in-miami-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Rooftop pool hotels with panoramic views in Miami, USA 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore Miami&#39;s super cool rooftop pool hotels with stunning panoramic views. Elevate your stay and enjoy the sun in the style!
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-rooftop-pool-hotels-with-panoramic-views-in-miami-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class='clear-both'>
+<div class='text-center pt-10'>
+<nav class="pagy-nav pagination"><span class="page prev"><a href="/explore/3"   rel="prev" aria-label="previous">&lsaquo;&nbsp;Prev</a></span> <span class="page"><a href="/explore/1"   >1</a></span> <span class="page"><a href="/explore/2"   >2</a></span> <span class="page"><a href="/explore/3"   rel="prev" >3</a></span> <span class="page active">4</span> <span class="page"><a href="/explore/5"   rel="next" >5</a></span> <span class="page"><a href="/explore/6"   >6</a></span> <span class="page"><a href="/explore/7"   >7</a></span> <span class="page next"><a href="/explore/5"   rel="next" aria-label="next">Next&nbsp;&rsaquo;</a></span></nav>
+</div>
+</div>
+
+</main>
+<footer class='bg-white rounded-lg dark:bg-gray-900 m-4'>
+<div class='w-full max-w-screen-xl mx-auto p-4 md:py-8'>
+<div class='sm:flex sm:items-center sm:justify-between'>
+<a class='flex items-center' href='/'>
+<span class='border-2 px-2 py-1 border-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white dark:border-white'>epictripic</span>
+</a>
+<span class='block text-sm text-gray-500 sm:text-right dark:text-gray-400'>
+©
+2024
+<a class='hover:underline' href='/'>EpicTripic™</a>.
+</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

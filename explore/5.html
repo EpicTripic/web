@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+<link href='/favicon.ico' rel='icon' type='image/x-icon'>
+<title>EpicTripic</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="pACA05DPuPEYqXHUNx2_X35NVgx7OuBbMVPDiXQ0msgIaradPcZm4LtmUtqIeyt2UkCDS5Cxf1T4fRVyaxjONA" />
+
+<link rel="stylesheet" href="/assets/application-2cdf6bae10d7677131c5559c4acab5f4afe41fad9ff12862d81828c8ed75c781.css" data-turbo-track="reload" />
+<script src="/assets/application-d831fdfdbe4be5d71b12b4438f3bd4cc1d72ac2ffb67a907e899de9b6699e80d.js" data-turbo-track="reload" defer="defer"></script>
+<script>
+  setTimeout(function() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', "GTM-NK4J85WR");
+  }, 1000)
+</script>
+
+<script>
+  if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+</script>
+
+
+</head>
+<body class='dark:bg-gray-800 antialiased'>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-NK4J85WR' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+
+<nav class='bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 z-30'>
+<div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+<a class='flex items-center' href='/'>
+<span class='border-2 px-2 py-1 border-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white dark:border-white'>epictripic</span>
+</a>
+<div class='flex md:order-2'>
+<button class='text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5' data-tooltip-target='tooltip-theme' id='theme-toggle' title='Toggle theme' type='button'>
+<svg class='hidden w-5 h-5' fill='currentColor' id='theme-toggle-dark-icon' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+<path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'></path>
+</svg>
+<svg class='hidden w-5 h-5' fill='currentColor' id='theme-toggle-light-icon' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+<path clip-rule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z' fill-rule='evenodd'></path>
+</svg>
+</button>
+<div class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700' id='tooltip-theme' role='tooltip'>
+Switch Theme
+<div class='tooltip-arrow' data-popper-arrow=''></div>
+</div>
+<button aria-controls='navbar-sticky' aria-expanded='false' class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600' data-collapse-toggle='navbar-sticky' type='button'>
+<span class='sr-only'>Open main menu</span>
+<svg aria-hidden='true' class='w-5 h-5' fill='none' viewbox='0 0 17 14' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 1h15M1 7h15M1 13h15' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</button>
+</div>
+<div class='items-center justify-between hidden w-full md:flex md:w-auto md:order-1' id='navbar-sticky'>
+<ul class='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
+<li>
+<a aria-current='page' class='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500' href='/'>Home</a>
+</li>
+<li>
+<a class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700' href='https://www.expedia.com/' rel='nofollow' target='_blank'>Hotels</a>
+</li>
+<li>
+<a class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700' href='https://vrbo.com' rel='nofollow' target='_blank'>Private Accommodations</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class='mt-[4.5rem]'>
+
+</div>
+<main class='container mx-auto px-4 my-5'>
+<h1 class='pt-5 text-4xl font-extrabold dark:text-white'>Explore latest articles</h1>
+<div>
+<div class='pt-10 grid lg:grid-cols-4 gap-4 md:grid-cols-2 sm:grid-cols-1 place-items-center'>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/hotels-with-infinity-pools-in-florida-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/2000000/1590000/1584900/1584899/610ee5e0.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/hotels-with-infinity-pools-in-florida-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Hotels with Infinity Pools in Florida, USA
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the ultimate relaxation at hotels with infinity pools in Florida, USA. Immerse yourself in luxury and endless views of the Sunshine State.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/hotels-with-infinity-pools-in-florida-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-adults-only-hotels-in-florida-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/16000000/15200000/15192500/15192425/ce2869c0.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-adults-only-hotels-in-florida-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Adults-only Hotels in Florida, USA
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the top adults-only hotels in Florida, USA, offering relaxation and luxury for your getaway. Find the perfect retreat for a serene vacation without distractions.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-adults-only-hotels-in-florida-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-cabins-with-hot-tubs-in-alberta-canada'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/23000000/22720000/22712700/22712664/5228f248.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-cabins-with-hot-tubs-in-alberta-canada'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Cabins With Hot Tubs in Alberta, Canada
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Book a cozy cabin in Alberta with a hot tub for the ultimate relaxation. Plan your stay for a cozy and rejuvenating experience in Alberta, Canada. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-cabins-with-hot-tubs-in-alberta-canada'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-10-best-hotels-in-birgunj-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/94000000/93480000/93473200/93473147/e107a440.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-10-best-hotels-in-birgunj-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The 10 Best Hotels in Birgunj, Nepal 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the top 10 hotels in Birgunj, Nepal, offering exceptional accommodations and service, ensuring a memorable and comfortable stay for all travelers.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-10-best-hotels-in-birgunj-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-wedding-venues-in-texas-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/20000/17400/17329/07a293d7.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-wedding-venues-in-texas-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Wedding Venues in Texas, USA
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore a variety of enchanting wedding venues in Texas, USA, from rustic barns to elegant ballrooms, and make your dream wedding a reality. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-wedding-venues-in-texas-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-15-cheap-accommodations-in-rio-de-janeiro-brazil-a624c672-a90c-4048-9190-8b84afad356c'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/5000000/4320000/4316400/4316320/e5086585.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-15-cheap-accommodations-in-rio-de-janeiro-brazil-a624c672-a90c-4048-9190-8b84afad356c'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top 15 cheap accommodations in Rio de Janeiro, Brazil
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore the best cheap accommodations in Rio de Janeiro, Brazil, handpicked for your budget-friendly stay in the city&#39;s most affordable accommodations.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-15-cheap-accommodations-in-rio-de-janeiro-brazil-a624c672-a90c-4048-9190-8b84afad356c'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-10-best-budget-hotels-with-scenic-views-in-nagarkot-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/20000000/19320000/19310300/19310225/0b10435c.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-10-best-budget-hotels-with-scenic-views-in-nagarkot-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The 10 Best budget hotels with scenic views in Nagarkot, Nepal 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore affordable accommodation with stunning views in Nagarkot, Nepal. Discover the top 10 budget hotels offering nature&#39;s beauty without on quality.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-10-best-budget-hotels-with-scenic-views-in-nagarkot-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-resorts-for-hosting-a-party-in-miami-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/870000/868300/868216/25369c61.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-resorts-for-hosting-a-party-in-miami-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Resorts for Hosting a Party in Miami, USA
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the top resorts in Miami, USA, perfect for hosting unforgettable parties. Explore luxury venues with vibrant atmospheres and premium amenities.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-resorts-for-hosting-a-party-in-miami-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-resorts-to-party-in-the-dominican-republic'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/2000000/1940000/1937300/1937218/06e49a8c.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-resorts-to-party-in-the-dominican-republic'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Resorts to Party in the Dominican Republic
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the top resorts to experience exciting parties in the Dominican Republic. Enjoy the luxurious settings and dance the night away at these vibrant hotspots.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-resorts-to-party-in-the-dominican-republic'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-accommodations-to-stay-on-your-grand-canyon-trip-arizona-usa'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/34000000/33970000/33969100/33969056/be3b7ef9.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-accommodations-to-stay-on-your-grand-canyon-trip-arizona-usa'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Accommodations to Stay on Your Grand Canyon trip Arizona, USA 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the best places to stay for your Grand Canyon adventure in Arizona, USA! Cozy lodges, beautiful views, and memorable experiences awaits you.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-accommodations-to-stay-on-your-grand-canyon-trip-arizona-usa'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-10-family-friendly-hotels-in-kathmandu-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/6000000/5230000/5229700/5229638/c41900f6.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-10-family-friendly-hotels-in-kathmandu-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top 10 Family-friendly hotels in Kathmandu, Nepal
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore the top 10 family-friendly hotels in Kathmandu for a memorable getaway with your loved ones experiencing true Nepalese Culture and tradition. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-10-family-friendly-hotels-in-kathmandu-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-finest-boutique-hotels-in-kathmandu-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/24000000/23160000/23150400/23150389/e1a1d407.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-finest-boutique-hotels-in-kathmandu-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The Finest Boutique Hotels in Kathmandu, Nepal
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Experience luxury and culture at Kathmandu&#39;s boutique hotels. Explore our selection for an unforgettable stay in Nepal&#39;s vibrant capital.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-finest-boutique-hotels-in-kathmandu-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-best-apartments-in-kathmandu-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/28000000/27850000/27843800/27843701/168d5e16.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-best-apartments-in-kathmandu-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The Best Apartments in Kathmandu, Nepal
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Uncover urban living at its finest in Kathmandu, Nepal. Explore top apartments with luxurious amenities and prime locations, for ideal stay in this vibrant metropolis.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-best-apartments-in-kathmandu-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/hotels-with-the-best-restaurants-in-rio-de-janeiro-brazil'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/46000000/45770000/45766700/45766642/1ebfc7f7.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/hotels-with-the-best-restaurants-in-rio-de-janeiro-brazil'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Hotels with the Best Restaurants in Rio de Janeiro, Brazil
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover Rio de Janeiro&#39;s top hotels featuring the finest dining experiences. Discover delicious cuisines and breathtaking views at these must visit destinations. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/hotels-with-the-best-restaurants-in-rio-de-janeiro-brazil'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-best-things-to-do-in-kathmandu'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/26000000/25790000/25781500/25781497/ecb4bf8a.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-best-things-to-do-in-kathmandu'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The Best Things to do in Kathmandu
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore Kathmandu&#39;s vibrant culture, heritage, and delicious food. Find the best things to do and the best places to stay in the K-city, Nepal.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-best-things-to-do-in-kathmandu'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-best-3-star-hotels-in-lalitpur-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/19000000/18250000/18244200/18244145/060e78e0.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-best-3-star-hotels-in-lalitpur-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The Best 3 Star Hotels in Lalitpur, Nepal 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover comfort and affordability in Lalitpur, Nepal, with the guide to the best 3-star hotels. Get ready to experience the perfect blend of luxury in this vibrant city.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-best-3-star-hotels-in-lalitpur-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-best-historic-hotels-in-kathmandu-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/6000000/5860000/5857500/5857498/382b63c2.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-best-historic-hotels-in-kathmandu-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The Best Historic Hotels in Kathmandu, Nepal
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore Kathmandu&#39;s finest historic hotels for an unforgettable stay in Nepal&#39;s capital. Experience the city&#39;s rich heritage, tradition, and modern comforts!
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-best-historic-hotels-in-kathmandu-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-10-best-hotels-and-resorts-near-bhaktapur-durbar-square-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/7000000/6680000/6670600/6670567/8ea6a2de.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-10-best-hotels-and-resorts-near-bhaktapur-durbar-square-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The 10 Best Hotels and Resorts Near Bhaktapur Durbar Square, Nepal
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore Bhaktapur Durbar Square with ease from the list of the top 10 hotels and resorts nearby. Unwind in comfort and luxury amidst Nepal&#39;s rich cultural heritage.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-10-best-hotels-and-resorts-near-bhaktapur-durbar-square-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/the-15-best-traditional-hotels-in-bhaktapur-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/12000000/11840000/11839000/11838997/855ac38f.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/the-15-best-traditional-hotels-in-bhaktapur-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+The 15 Best Traditional Hotels in Bhaktapur, Nepal
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover Bhaktapur&#39;s top 15 traditional hotels, where history meets hospitality for an unforgettable stay in Nepal&#39;s ancient city.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/the-15-best-traditional-hotels-in-bhaktapur-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/unique-homestays-in-patan-lalitpur-with-authentic-nepali-hospitality'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/22000000/21430000/21421600/21421530/0cc74e5e.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/unique-homestays-in-patan-lalitpur-with-authentic-nepali-hospitality'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Accommodation near Patan Durbar Square, Lalitpur, Nepal
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the top accommodations near Patan Durbar Square, Patan, offering a blend of comfort, convenience, and cultural immersion in the heart of Nepal&#39;s historic charm.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/unique-homestays-in-patan-lalitpur-with-authentic-nepali-hospitality'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class='clear-both'>
+<div class='text-center pt-10'>
+<nav class="pagy-nav pagination"><span class="page prev"><a href="/explore/4"   rel="prev" aria-label="previous">&lsaquo;&nbsp;Prev</a></span> <span class="page"><a href="/explore/1"   >1</a></span> <span class="page"><a href="/explore/2"   >2</a></span> <span class="page"><a href="/explore/3"   >3</a></span> <span class="page"><a href="/explore/4"   rel="prev" >4</a></span> <span class="page active">5</span> <span class="page"><a href="/explore/6"   rel="next" >6</a></span> <span class="page"><a href="/explore/7"   >7</a></span> <span class="page next"><a href="/explore/6"   rel="next" aria-label="next">Next&nbsp;&rsaquo;</a></span></nav>
+</div>
+</div>
+
+</main>
+<footer class='bg-white rounded-lg dark:bg-gray-900 m-4'>
+<div class='w-full max-w-screen-xl mx-auto p-4 md:py-8'>
+<div class='sm:flex sm:items-center sm:justify-between'>
+<a class='flex items-center' href='/'>
+<span class='border-2 px-2 py-1 border-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white dark:border-white'>epictripic</span>
+</a>
+<span class='block text-sm text-gray-500 sm:text-right dark:text-gray-400'>
+©
+2024
+<a class='hover:underline' href='/'>EpicTripic™</a>.
+</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

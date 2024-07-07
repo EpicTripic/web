@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+<link href='/favicon.ico' rel='icon' type='image/x-icon'>
+<title>EpicTripic</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="pJAN6ink7g1yLby4cFFABw2Z6avkZxWZcEe61hIx3YMI-jukhO0wHNHin7bPN9QuIZQ87A_sipa5aWwtDR2Jfw" />
+
+<link rel="stylesheet" href="/assets/application-2cdf6bae10d7677131c5559c4acab5f4afe41fad9ff12862d81828c8ed75c781.css" data-turbo-track="reload" />
+<script src="/assets/application-d831fdfdbe4be5d71b12b4438f3bd4cc1d72ac2ffb67a907e899de9b6699e80d.js" data-turbo-track="reload" defer="defer"></script>
+<script>
+  setTimeout(function() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', "GTM-NK4J85WR");
+  }, 1000)
+</script>
+
+<script>
+  if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+</script>
+
+
+</head>
+<body class='dark:bg-gray-800 antialiased'>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-NK4J85WR' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+
+<nav class='bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 z-30'>
+<div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+<a class='flex items-center' href='/'>
+<span class='border-2 px-2 py-1 border-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white dark:border-white'>epictripic</span>
+</a>
+<div class='flex md:order-2'>
+<button class='text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5' data-tooltip-target='tooltip-theme' id='theme-toggle' title='Toggle theme' type='button'>
+<svg class='hidden w-5 h-5' fill='currentColor' id='theme-toggle-dark-icon' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+<path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'></path>
+</svg>
+<svg class='hidden w-5 h-5' fill='currentColor' id='theme-toggle-light-icon' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+<path clip-rule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z' fill-rule='evenodd'></path>
+</svg>
+</button>
+<div class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700' id='tooltip-theme' role='tooltip'>
+Switch Theme
+<div class='tooltip-arrow' data-popper-arrow=''></div>
+</div>
+<button aria-controls='navbar-sticky' aria-expanded='false' class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600' data-collapse-toggle='navbar-sticky' type='button'>
+<span class='sr-only'>Open main menu</span>
+<svg aria-hidden='true' class='w-5 h-5' fill='none' viewbox='0 0 17 14' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 1h15M1 7h15M1 13h15' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</button>
+</div>
+<div class='items-center justify-between hidden w-full md:flex md:w-auto md:order-1' id='navbar-sticky'>
+<ul class='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
+<li>
+<a aria-current='page' class='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500' href='/'>Home</a>
+</li>
+<li>
+<a class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700' href='https://www.expedia.com/' rel='nofollow' target='_blank'>Hotels</a>
+</li>
+<li>
+<a class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700' href='https://vrbo.com' rel='nofollow' target='_blank'>Private Accommodations</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class='mt-[4.5rem]'>
+
+</div>
+<main class='container mx-auto px-4 my-5'>
+<h1 class='pt-5 text-4xl font-extrabold dark:text-white'>Explore latest articles</h1>
+<div>
+<div class='pt-10 grid lg:grid-cols-4 gap-4 md:grid-cols-2 sm:grid-cols-1 place-items-center'>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/a-collection-of-unique-stays-in-seattle-washington'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/72000000/71010000/71006200/71006199/dfb6e084.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/a-collection-of-unique-stays-in-seattle-washington'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+A Collection of Unique Stays in Seattle, Washington
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore Seattle&#39;s unique blend of urban advancement and nature. Discover handpicked stays for an extraordinary experience, from city retreats to cozy homes.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/a-collection-of-unique-stays-in-seattle-washington'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/pet-friendly-accommodations-for-peaceful-family-holidays-in-alaska'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/96000000/95800000/95794800/95794746/abbe33e0.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/pet-friendly-accommodations-for-peaceful-family-holidays-in-alaska'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Pet-Friendly Accommodations for Peaceful Family Holidays in Alaska
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Experience the magic of Alaska&#39;s icy embrace, a haven for Northern Lights and wildlife enthusiasts. Discover pet-friendly accommodations for a cozy retreat.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/pet-friendly-accommodations-for-peaceful-family-holidays-in-alaska'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/20-scenic-accommodations-for-winter-trips-to-lofoten-norway'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/23000000/22340000/22330400/22330315/f56a88f7.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/20-scenic-accommodations-for-winter-trips-to-lofoten-norway'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+20 Scenic Accommodations for Winter Trips to Lofoten, Norway
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Experience the enchanting winter magic of Lofoten, Norway, where snow-kissed landscapes and Northern Lights converge. Explore 20 accommodations amid Arctic wonders.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/20-scenic-accommodations-for-winter-trips-to-lofoten-norway'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/15-iconic-places-to-stay-in-and-around-the-historic-city-of-prague-czechia'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/20000000/19500000/19499800/19499757/f4dd00ae.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/15-iconic-places-to-stay-in-and-around-the-historic-city-of-prague-czechia'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+15 Iconic places to Stay in and Around the Historic City of Prague, Czechia
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover the hidden jewel of Central Europe in Czechia. Prague, with its timeless charm, invites you to experience 15 iconic stays, a part of Czech life&#39;s rich mosaic.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/15-iconic-places-to-stay-in-and-around-the-historic-city-of-prague-czechia'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/amazing-beachfront-stays-with-pools-in-sydney-australia'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/101000000/100650000/100644300/100644208/2c2a7298.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/amazing-beachfront-stays-with-pools-in-sydney-australia'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Amazing Beachfront Stays with Pools in Sydney, Australia
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Are you ready to experience the ultimate fun in a city where sophistication infuses with natural wonders and spend a night at these amazingly selected beachfront stays with pools!
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/amazing-beachfront-stays-with-pools-in-sydney-australia'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/accommodations-with-excellent-guest-reviews-in-sydney-australia'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/10000/4900/4807/0ffb1617.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/accommodations-with-excellent-guest-reviews-in-sydney-australia'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Accommodations with Excellent Guest Reviews in Sydney, Australia
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Whether you dream of sipping an espresso in a Sydney laneway, surfing on Bondi Beach, or exploring the mysterious of the Outback, Australia is the right place. 
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/accommodations-with-excellent-guest-reviews-in-sydney-australia'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/12-cheapest-vrbo-accommodations-in-new-york-city'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/20000000/19690000/19684700/19684606/5aabfaf2.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/12-cheapest-vrbo-accommodations-in-new-york-city'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+12 Cheapest VRBO Accommodations in New York City
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Stay at any of these 12 amazingly budget-friendly cheap accommodations without breaking the bank. Be ready for the New York City Experience!
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/12-cheapest-vrbo-accommodations-in-new-york-city'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/family-friendly-hotels-in-scotland'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/530000/522900/522846/2e45c46f.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/family-friendly-hotels-in-scotland'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Family-friendly Hotels in Scotland
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Discover enchanting family-friendly hotels in Scotland, offering cozy stays amid stunning landscapes. Ideal for creating cherished moments, explore Scottish charm and hospitality.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/family-friendly-hotels-in-scotland'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-nyc-hostels-for-solo-travelers'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/20000000/19690000/19684700/19684606/55b44d9e.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-nyc-hostels-for-solo-travelers'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best NYC Hostels for Solo Travelers
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Stay in the ultimate playground for solo travelers here in the city that never sleeps, New York City. Pack your bags and be ready for an entertainment filled trip.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-nyc-hostels-for-solo-travelers'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-cities-for-a-relaxing-winter-visit-to-europe'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/3000000/2550000/2542300/2542296/a5026fb4.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-cities-for-a-relaxing-winter-visit-to-europe'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best Cities for a Relaxing Winter Visit to Europe
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Home to one the best cities in the world, Europe warmly welcomes you for a stay at theirs. So pack your bags and get ready!
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/best-cities-for-a-relaxing-winter-visit-to-europe'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-10-budget-friendly-business-hotels-in-london'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/20000000/19550000/19545700/19545636/d08a8c40.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-10-budget-friendly-business-hotels-in-london'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top 10 Budget-Friendly Business Hotels in London 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Escape the mundane office walls in London! Explore budget-friendly, business-friendly hotels for a cozy and productive work stay amidst historic monuments and modern charm.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-10-budget-friendly-business-hotels-in-london'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/hostels-in-tasmania-for-solo-travelers'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/16000000/15120000/15110500/15110480/272008b0.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/hostels-in-tasmania-for-solo-travelers'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Hostels in Tasmania for Solo Travelers
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Embark on a solo Tasmanian adventure with affordable hostels, breathtaking landscapes, and local camaraderie for an unforgettable journey through unique wildlife and hospitality.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/hostels-in-tasmania-for-solo-travelers'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/recommendations-for-the-best-european-things-to-do-during-winters'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/10000/6200/6139/7c7ef6c0.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/recommendations-for-the-best-european-things-to-do-during-winters'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Recommendations for the Best “European” things to do During Winters 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Embrace winter&#39;s magic in Europe with thermal baths in Budapest, Northern Lights in Tromso, Spanish sun in Madrid, and more.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/recommendations-for-the-best-european-things-to-do-during-winters'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/guide-to-celebrating-summer-in-the-most-australian-way'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/910000/909600/909568/c83d1f4c.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/guide-to-celebrating-summer-in-the-most-australian-way'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Best places to Visit in Australia - A Guide to Celebrating Summer in the Most “Australian” Way
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore Australia&#39;s summer: Bondi Beach&#39;s sun-soaked days, Sydney&#39;s vibrant events, Melbourne&#39;s culture, Cairns&#39; tropical bliss, and coastal serenity in Byron Bay.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/guide-to-celebrating-summer-in-the-most-australian-way'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-10-exciting-stays-in-barcelona'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/10000/5100/5002/03686254.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-10-exciting-stays-in-barcelona'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top 10 Exciting Stays in Barcelona 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Barcelona offers a diverse cultural experience to its visitors. Here is a careful selection of exciting hotels to stay in this historic city.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-10-exciting-stays-in-barcelona'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/budget-friendly-places-to-stay-in-tasmania-australia'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/1000000/430000/423700/423677/648a825b.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/budget-friendly-places-to-stay-in-tasmania-australia'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Budget-friendly places to stay in Tasmania, Australia
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore Tasmania on a budget with cozy, affordable spots offering killer views and lively hostels—your budget-friendly BFF for an unforgettable journey.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/budget-friendly-places-to-stay-in-tasmania-australia'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-10-luxury-hotels-in-bharatpur-nepal'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/11000000/10380000/10374500/10374455/d83fee49.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-10-luxury-hotels-in-bharatpur-nepal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top 10 Luxury Hotels in Bharatpur, Nepal 
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Explore the true luxury with our top 10 luxury hotels in Bharatpur, Nepal. Experience unmatched comfort and hospitality in this vibrant city.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-10-luxury-hotels-in-bharatpur-nepal'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/most-unique-places-to-stay-in-the-united-kingdom'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/23000000/22280000/22278500/22278403/a2f1bb44.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/most-unique-places-to-stay-in-the-united-kingdom'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Most Unique Places to Stay in the United Kingdom
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Embark on a UK adventure with unique stays – from time-traveling castles to cozy nature nests. Ditch ordinary beds for extraordinary experiences!
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/most-unique-places-to-stay-in-the-united-kingdom'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/handpicked-secluded-cottages-for-a-remote-uk-holiday'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/77000000/76520000/76517300/76517236/8e2ce493.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/handpicked-secluded-cottages-for-a-remote-uk-holiday'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Handpicked Secluded Cottages for a Remote UK Holiday
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Experience serenity in secluded UK cottages, surrounded by nature. Escape daily stress, unwind, and create lasting memories in peaceful hideaways.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/handpicked-secluded-cottages-for-a-remote-uk-holiday'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+<div>
+<div class='max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/top-cottages-near-muskoka-lakes-in-ontario-canada'>
+<img alt='' class='rounded-t-lg' src='https://images.trvl-media.com/lodging/46000000/45580000/45576200/45576152/ad6a2a03.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/top-cottages-near-muskoka-lakes-in-ontario-canada'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+Top cottages near Muskoka Lakes in Ontario, Canada
+</h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Ontario&#39;s Muskoka Lakes offer thrilling adventures, escape routine, nature&#39;s beauty, and unforgettable moments in cottages.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' href='/travel/top-cottages-near-muskoka-lakes-in-ontario-canada'>
+Read more
+<svg aria-hidden='true' class='rtl:rotate-180 ms-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+<div class='clear-both'>
+<div class='text-center pt-10'>
+<nav class="pagy-nav pagination"><span class="page prev"><a href="/explore/2"   rel="prev" aria-label="previous">&lsaquo;&nbsp;Prev</a></span> <span class="page"><a href="/explore/1"   >1</a></span> <span class="page"><a href="/explore/2"   rel="prev" >2</a></span> <span class="page active">3</span> <span class="page"><a href="/explore/4"   rel="next" >4</a></span> <span class="page"><a href="/explore/5"   >5</a></span> <span class="page"><a href="/explore/6"   >6</a></span> <span class="page"><a href="/explore/7"   >7</a></span> <span class="page next"><a href="/explore/4"   rel="next" aria-label="next">Next&nbsp;&rsaquo;</a></span></nav>
+</div>
+</div>
+
+</main>
+<footer class='bg-white rounded-lg dark:bg-gray-900 m-4'>
+<div class='w-full max-w-screen-xl mx-auto p-4 md:py-8'>
+<div class='sm:flex sm:items-center sm:justify-between'>
+<a class='flex items-center' href='/'>
+<span class='border-2 px-2 py-1 border-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white dark:border-white'>epictripic</span>
+</a>
+<span class='block text-sm text-gray-500 sm:text-right dark:text-gray-400'>
+©
+2024
+<a class='hover:underline' href='/'>EpicTripic™</a>.
+</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

@@ -1,1 +1,206 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+<link href='/favicon.ico' rel='icon' type='image/x-icon'>
+<title>EpicTripic | EpicTripic</title>
+<meta name="description" content="Get the best travel tips, accommodations, and activity guides for your next trip. EpicTripic offers extensive research on the best things to do, places to stay, and foods to try at your next travel destination">
+<link rel="canonical" href="https://www.epictripic.com">
+<meta property="og:title" content="EpicTripic">
+<meta property="og:site_name" content="EpicTripic">
+<meta property="og:description" content="Get the best travel tips, accommodations, and activity guides for your next trip. EpicTripic offers extensive research on the best things to do, places to stay, and foods to try at your next travel destination">
+<meta property="og:image" content="https://images.trvl-media.com/lodging/1000000/30000/28200/28105/1c1dfea8.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium">
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="cxUXp9Ty3S2ja7A7w3G76Z2UvnvaSraVYmSy91ZqU8rffyHpefsDPACkkzV8Fy_AsZlrPDHBKZqrSmQMSUYHNg" />
+
+<link rel="stylesheet" href="/assets/application-2cdf6bae10d7677131c5559c4acab5f4afe41fad9ff12862d81828c8ed75c781.css" data-turbo-track="reload" />
+<script src="/assets/application-d831fdfdbe4be5d71b12b4438f3bd4cc1d72ac2ffb67a907e899de9b6699e80d.js" data-turbo-track="reload" defer="defer"></script>
+<script>
+  setTimeout(function() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer', "GTM-NK4J85WR");
+  }, 1000)
+</script>
+
+<script>
+  if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+</script>
+
+
+</head>
+<body class='dark:bg-gray-800 antialiased'>
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-NK4J85WR' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+
+<nav class='bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 z-30'>
+<div class='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+<a class='flex items-center' href='/'>
+<span class='border-2 px-2 py-1 border-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white dark:border-white'>epictripic</span>
+</a>
+<div class='flex md:order-2'>
+<button class='text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5' data-tooltip-target='tooltip-theme' id='theme-toggle' title='Toggle theme' type='button'>
+<svg class='hidden w-5 h-5' fill='currentColor' id='theme-toggle-dark-icon' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+<path d='M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z'></path>
+</svg>
+<svg class='hidden w-5 h-5' fill='currentColor' id='theme-toggle-light-icon' viewbox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'>
+<path clip-rule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z' fill-rule='evenodd'></path>
+</svg>
+</button>
+<div class='absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700' id='tooltip-theme' role='tooltip'>
+Switch Theme
+<div class='tooltip-arrow' data-popper-arrow=''></div>
+</div>
+<button aria-controls='navbar-sticky' aria-expanded='false' class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600' data-collapse-toggle='navbar-sticky' type='button'>
+<span class='sr-only'>Open main menu</span>
+<svg aria-hidden='true' class='w-5 h-5' fill='none' viewbox='0 0 17 14' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 1h15M1 7h15M1 13h15' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</button>
+</div>
+<div class='items-center justify-between hidden w-full md:flex md:w-auto md:order-1' id='navbar-sticky'>
+<ul class='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
+<li>
+<a aria-current='page' class='block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500' href='/'>Home</a>
+</li>
+<li>
+<a class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700' href='https://www.expedia.com/' rel='nofollow' target='_blank'>Hotels</a>
+</li>
+<li>
+<a class='block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700' href='https://vrbo.com' rel='nofollow' target='_blank'>Private Accommodations</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div class='mt-[4.5rem]'>
+<div class='relative w-full' data-carousel='static' id='animation-carousel'>
+<!-- Carousel wrapper -->
+<div class='relative h-56 overflow-hidden md:h-96'>
+<!-- Item 1 -->
+<div class='hidden duration-200 ease-linear' data-carousel-item=''>
+<img alt='Image of The Best View Hotels in San Francisco near the Golden Gate Bridge' class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2' src='https://images.trvl-media.com/lodging/2000000/1890000/1886700/1886656/210c1f9e.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</div>
+<div class='hidden duration-200 ease-linear' data-carousel-item=''>
+<img alt='Image of 5-star Hotels with Amazing Hospitality in London' class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2' src='https://images.trvl-media.com/lodging/1000000/10000/4100/4026/14a52e42.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</div>
+<div class='hidden duration-200 ease-linear' data-carousel-item=''>
+<img alt='Image of 10 Best Places to Stay in Ireland- The Land of Adventure' class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2' src='https://images.trvl-media.com/lodging/5000000/4060000/4052300/4052299/3ce5c3f1.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</div>
+<div class='hidden duration-200 ease-linear' data-carousel-item=''>
+<img alt='Image of 11 Best Beachfront Villas in Greece ' class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2' src='https://images.trvl-media.com/lodging/94000000/93400000/93394600/93394541/0eb3cf47.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</div>
+<div class='hidden duration-200 ease-linear' data-carousel-item=''>
+<img alt='Image of Top 10 hotels in the heart of Rome' class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2' src='https://images.trvl-media.com/lodging/75000000/74980000/74973000/74972957/3752be51.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</div>
+</div>
+<!-- Slider controls -->
+<button class='absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none' data-carousel-prev='' type='button'>
+<span class='inline-flex items-center justify-center w-10 h-10 rounded-full group-focus:ring-4 group-focus:ring-white group-focus:outline-none bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70'>
+<svg aria-hidden='true' class='w-4 h-4 text-white dark:text-gray-800' fill='none' viewbox='0 0 6 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M5 1 1 5l4 4' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+<span class='sr-only'>Previous</span>
+</span>
+</button>
+<button class='absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none' data-carousel-next='' type='button'>
+<span class='inline-flex items-center justify-center w-10 h-10 rounded-full group-focus:ring-4 group-focus:ring-white group-focus:outline-none bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70'>
+<svg aria-hidden='true' class='w-4 h-4 text-white dark:text-gray-800' fill='none' viewbox='0 0 6 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='m1 9 4-4-4-4' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+<span class='sr-only'>Next</span>
+</span>
+</button>
+</div>
+
+</div>
+<main class='container mx-auto px-4 my-5'>
+<h3 class='mb-4 mt-5 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-3xl dark:text-white'>
+Featured Articles
+</h3>
+<div class='grid mt-3 gap-5 md:grid-cols-2'>
+<div class='bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
+<a href='/travel/best-destinations-in-eastern-europe-for-winter'>
+<img alt='' class='rounded-t-lg object-cover object-fit-none max-h-48 w-full' src='https://images.trvl-media.com/lodging/2000000/1590000/1580700/1580698/73f4057a.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+</a>
+<div class='p-5'>
+<a href='/travel/best-destinations-in-eastern-europe-for-winter'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>Best Destinations in Eastern Europe For Winter </h5>
+</a>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+Planning for a winter trip around Europe? Have a look at our recommendations for an affordable trip around the best European cities.
+</p>
+<a class='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800' href='/travel/best-destinations-in-eastern-europe-for-winter'>
+Read more
+<svg aria-hidden='true' class='ml-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+</div>
+</div>
+<div class='grid gap-5 sm:grid-cols-1'>
+<div class='w-full'>
+<a class='h-full flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700' href='/travel/15-stays-with-incredible-nature-views-in-iceland'>
+<img alt='' class='object-cover w-full rounded-t-lg h-full md:h-full md:w-48 md:rounded-none md:rounded-l-lg' src='https://images.trvl-media.com/lodging/20000000/19830000/19821200/19821200/db7017ee.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+<div class='flex flex-col justify-between p-4 leading-normal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>15 Stays With Incredible Nature Views in Iceland</h5>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>Iceland is no less than a paradise for nature lovers. Here are the 15 best places to stay and enjoy incredible views (including Northern lights) in Iceland. </p>
+</div>
+</a>
+</div>
+<div class='w-full'>
+<a class='h-full flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700' href='/travel/13-best-family-friendly-resorts-in-florida'>
+<img alt='' class='object-cover w-full rounded-t-lg h-full md:h-full md:w-48 md:rounded-none md:rounded-l-lg' src='https://images.trvl-media.com/lodging/12000000/11600000/11593700/11593685/0423129c.jpg?impolicy=fcrop&amp;w=1000&amp;h=666&amp;quality=medium'>
+<div class='flex flex-col justify-between p-4 leading-normal'>
+<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>13 Best Family-friendly Resorts in Florida </h5>
+<p class='mb-3 font-normal text-gray-700 dark:text-gray-400'>
+One never gets enough of Florida. Take a look at the best family-friendly resorts in the Sunshine State that offer a perfect blend of adventure and comfort.
+</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+<a class='mt-5 float-right inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800' href='/explore'>
+Explore more articles
+<svg aria-hidden='true' class='ml-2 w-3.5 h-3.5' fill='none' viewbox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'>
+<path d='M1 5h12m0 0L9 1m4 4L9 9' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'></path>
+</svg>
+</a>
+<div class='clear-both'></div>
+<h3 class='pt-5 mb-4 mt-5 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-3xl dark:text-white'>
+About EpicTripic
+</h3>
+<p class='mb-3 text-gray-500 dark:text-gray-400'>
+Traveling around amazing destinations of the world and making unforgettable memories to cherish for a lifetime is definitely something that most of us dream about. EpicTripic is an online travel book that recommends useful tips, accommodations and activity guides for travellers globally. Whether you are planning for your first solo trip to the Swiss Alps, or visiting Florida for an amazing trip with your family, our articles will help you plan your trips better. Our extensive research on the best things to do, places to stay and foods to try at your next travel destination means preparing trip itineraries is no more a hassle. We offer the best information and travel hacks to help our readers make the most out of their time and budget; and hopefully create many EpicTripic stories to share with their friends and families
+</p>
+
+</main>
+<footer class='bg-white rounded-lg dark:bg-gray-900 m-4'>
+<div class='w-full max-w-screen-xl mx-auto p-4 md:py-8'>
+<div class='sm:flex sm:items-center sm:justify-between'>
+<a class='flex items-center' href='/'>
+<span class='border-2 px-2 py-1 border-black self-center text-2xl font-semibold whitespace-nowrap dark:text-white dark:border-white'>epictripic</span>
+</a>
+<span class='block text-sm text-gray-500 sm:text-right dark:text-gray-400'>
+©
+2024
+<a class='hover:underline' href='/'>EpicTripic™</a>.
+</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
